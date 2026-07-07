@@ -9,6 +9,7 @@ import heroWelding from "@/assets/hero-welding.jpg";
 import heroBlasting from "@/assets/hero-blasting.jpg";
 import heroPainting from "@/assets/hero-painting.jpg";
 import teamImg from "@/assets/team.jpg";
+import logoImg from "@/assets/logo.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -81,8 +82,8 @@ function Nav() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
-        <a href="#top" className="flex items-center gap-2" aria-label="HARDOX Industrial — início">
-          <span className="grid h-9 w-9 place-items-center rounded-md bg-gradient-primary font-black text-primary-foreground">H</span>
+        <a href="#top" className="flex items-center gap-3" aria-label="HARDOX Industrial — início">
+          <img src={logoImg} alt="HARDOX Industrial" className="h-10 w-10 rounded-md object-cover" />
           <span className="text-lg font-black tracking-tight">
             HARDOX <span className="text-primary">Industrial</span>
           </span>
@@ -158,6 +159,9 @@ function Hero() {
           <h1 className="mt-6 text-4xl font-black leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
             {slides[i].title}
           </h1>
+          <p className="mt-4 text-lg font-semibold italic text-primary md:text-xl">
+            O Sucesso do Seu Produto Passa Por Aqui
+          </p>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
             {slides[i].sub}
           </p>
@@ -296,7 +300,7 @@ function Servicos() {
         <div data-reveal className="mx-auto max-w-2xl text-center opacity-0">
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">Serviços e Soluções</span>
           <h2 className="mt-3 text-3xl font-black leading-tight md:text-5xl">
-            Um único parceiro, do aço bruto à peça pronta para operar.
+            Você nos entrega o projeto, nós devolvemos a peça pronta e acabada.
           </h2>
           <p className="mt-4 text-muted-foreground">
             Processos integrados que eliminam a fragmentação de fornecedores, reduzem gargalos logísticos e garantem controle total sobre qualidade e prazos.
@@ -597,10 +601,11 @@ function Footer() {
     <footer className="border-t border-border bg-secondary/30">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-3 md:px-8">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-md bg-gradient-primary font-black text-primary-foreground">H</span>
+          <div className="flex items-center gap-3">
+            <img src={logoImg} alt="HARDOX Industrial" className="h-10 w-10 rounded-md object-cover" />
             <span className="text-lg font-black tracking-tight">HARDOX <span className="text-primary">Industrial</span></span>
           </div>
+          <p className="mt-3 text-sm font-semibold italic text-primary">O Sucesso do Seu Produto Passa Por Aqui</p>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
             Metalmecânica industrial verticalizada em Corupá/SC. Solda, jateamento e pintura técnica em um único fluxo.
           </p>
