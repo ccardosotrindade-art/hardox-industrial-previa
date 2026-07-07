@@ -80,10 +80,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "HARDOX Industrial — Metalmecânica, Solda, Jateamento e Pintura em Corupá/SC" },
       { name: "description", content: "Fabricação, soldagem, jateamento e pintura técnica integradas em um único fluxo. Componentes industriais de alta durabilidade com controle total de qualidade e prazos." },
       { name: "author", content: "HARDOX Industrial" },
-      { property: "og:title", content: "HARDOX Industrial — Metalmecânica Industrial em Corupá/SC" },
-      { property: "og:description", content: "Solda, jateamento e pintura técnica integrados. Componentes industriais prontos para operação." },
+      { property: "og:title", content: "HARDOX Industrial — Metalmecânica, Solda, Jateamento e Pintura em Corupá/SC" },
+      { property: "og:description", content: "Fabricação, soldagem, jateamento e pintura técnica integradas em um único fluxo. Componentes industriais de alta durabilidade com controle total de qualidade e prazos." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "HARDOX Industrial — Metalmecânica, Solda, Jateamento e Pintura em Corupá/SC" },
+      { name: "twitter:description", content: "Fabricação, soldagem, jateamento e pintura técnica integradas em um único fluxo. Componentes industriais de alta durabilidade com controle total de qualidade e prazos." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fda300d5-5ff4-43bd-9d73-842cb6ee41bf/id-preview-3893d468--eaddae77-9509-43ef-a556-86e18ec0320f.lovable.app-1783444235212.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fda300d5-5ff4-43bd-9d73-842cb6ee41bf/id-preview-3893d468--eaddae77-9509-43ef-a556-86e18ec0320f.lovable.app-1783444235212.png" },
     ],
     links: [
       {
