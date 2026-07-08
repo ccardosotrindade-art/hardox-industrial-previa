@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hardox-industrial-previa.lovable.app/sitemap.xml

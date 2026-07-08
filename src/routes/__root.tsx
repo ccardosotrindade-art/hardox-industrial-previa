@@ -77,17 +77,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "HARDOX Industrial — Metalmecânica, Solda, Jateamento e Pintura em Corupá/SC" },
-      { name: "description", content: "Fabricação, soldagem, jateamento e pintura técnica integradas em um único fluxo. Componentes industriais de alta durabilidade com controle total de qualidade e prazos." },
       { name: "author", content: "HARDOX Industrial" },
-      { property: "og:title", content: "HARDOX Industrial — Metalmecânica, Solda, Jateamento e Pintura em Corupá/SC" },
-      { property: "og:description", content: "Fabricação, soldagem, jateamento e pintura técnica integradas em um único fluxo. Componentes industriais de alta durabilidade com controle total de qualidade e prazos." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "HARDOX Industrial" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "HARDOX Industrial — Metalmecânica, Solda, Jateamento e Pintura em Corupá/SC" },
-      { name: "twitter:description", content: "Fabricação, soldagem, jateamento e pintura técnica integradas em um único fluxo. Componentes industriais de alta durabilidade com controle total de qualidade e prazos." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fda300d5-5ff4-43bd-9d73-842cb6ee41bf/id-preview-3893d468--eaddae77-9509-43ef-a556-86e18ec0320f.lovable.app-1783444235212.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fda300d5-5ff4-43bd-9d73-842cb6ee41bf/id-preview-3893d468--eaddae77-9509-43ef-a556-86e18ec0320f.lovable.app-1783444235212.png" },
     ],
     links: [
       {
@@ -98,6 +91,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "HARDOX Industrial",
+          url: "https://hardox-industrial-previa.lovable.app",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "HARDOX Industrial",
+          url: "https://hardox-industrial-previa.lovable.app",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Rua Ano Bom, 1355",
+            addressLocality: "Corupá",
+            addressRegion: "SC",
+            addressCountry: "BR",
+          },
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
