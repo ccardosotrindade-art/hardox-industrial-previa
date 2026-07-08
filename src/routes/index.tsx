@@ -11,8 +11,75 @@ import heroPainting from "@/assets/hero-painting.jpg";
 import teamImg from "@/assets/team.jpg";
 import logoImg from "@/assets/logo.png";
 
+const SITE_URL = "https://hardox-industrial-previa.lovable.app";
+const OG_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fda300d5-5ff4-43bd-9d73-842cb6ee41bf/id-preview-3893d468--eaddae77-9509-43ef-a556-86e18ec0320f.lovable.app-1783444235212.png";
+const PAGE_TITLE = "HARDOX Industrial — Metalmecânica em Corupá/SC";
+const PAGE_DESC = "Fabricação, soldagem, jateamento e pintura técnica em um único fluxo. Componentes industriais de alta durabilidade em Santa Catarina.";
+const FAQ_ITEMS: { q: string; a: string }[] = [
+  { q: "Vocês fazem projetos?", a: "Não. Focamos na fabricação a partir das especificações e projetos do cliente." },
+  { q: "Vocês têm algum produto próprio?", a: "Não. Por enquanto, atuamos exclusivamente na fabricação sob demanda para terceiros." },
+  { q: "Quais estados vocês conseguem atender?", a: "A abrangência depende da logística e do processo de negociação com o cliente. Nossa base é Corupá/SC, atendendo com força a região norte de SC e o Vale do Itajaí." },
+  { q: "Quais normas de solda vocês seguem?", a: "Trabalhamos conforme ASME IX e AWS D1.1, com processos MIG/MAG, TIG e Eletrodo Revestido em Aço Carbono, Inox, Alumínio e Bronze." },
+  { q: "Vocês executam serviços na planta do cliente?", a: "Sim. Realizamos montagem e soldagem in-loco de máquinas, equipamentos e peças." },
+];
+
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: PAGE_TITLE },
+      { name: "description", content: PAGE_DESC },
+      { property: "og:title", content: PAGE_TITLE },
+      { property: "og:description", content: PAGE_DESC },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:image", content: OG_IMAGE },
+      { name: "twitter:title", content: PAGE_TITLE },
+      { name: "twitter:description", content: PAGE_DESC },
+      { name: "twitter:image", content: OG_IMAGE },
+    ],
+    links: [{ rel: "canonical", href: SITE_URL }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "HARDOX Industrial",
+          url: SITE_URL,
+          image: OG_IMAGE,
+          telephone: "+55 47 99119-9451",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Rua Ano Bom, 1355",
+            addressLocality: "Corupá",
+            addressRegion: "SC",
+            postalCode: "89278-000",
+            addressCountry: "BR",
+          },
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              opens: "07:00",
+              closes: "17:30",
+            },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: FAQ_ITEMS.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
+    ],
+  }),
 });
 
 const WHATSAPP = "5547991199451";
