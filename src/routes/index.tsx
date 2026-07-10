@@ -231,9 +231,6 @@ function Hero() {
           <h1 className="mt-6 text-4xl font-black leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
             {slides[i].title}
           </h1>
-          <p className="mt-4 text-lg font-semibold italic text-primary md:text-xl">
-            O Sucesso do Seu Produto Passa Por Aqui
-          </p>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
             {slides[i].sub}
           </p>
