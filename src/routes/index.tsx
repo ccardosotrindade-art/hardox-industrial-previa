@@ -156,7 +156,7 @@ function Nav() {
               HARDOX <span className="text-primary">Industrial</span>
             </span>
           </div>
-          <span className="pl-[52px] text-xs font-semibold italic text-primary">
+          <span className="whitespace-nowrap pl-[52px] text-xs font-semibold italic text-primary">
             O Sucesso do Seu Produto Passa Por Aqui
           </span>
         </a>
