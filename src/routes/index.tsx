@@ -149,10 +149,15 @@ function Nav() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
-        <a href="#top" className="flex items-center gap-3" aria-label="HARDOX Industrial — início">
-          <img src={logoImg} alt="HARDOX Industrial" className="h-10 w-10 rounded-md object-cover" />
-          <span className="text-lg font-black tracking-tight">
-            HARDOX <span className="text-primary">Industrial</span>
+        <a href="#top" className="flex flex-col gap-0.5" aria-label="HARDOX Industrial — início">
+          <div className="flex items-center gap-3">
+            <img src={logoImg} alt="HARDOX Industrial" className="h-10 w-10 rounded-md object-cover" />
+            <span className="text-lg font-black tracking-tight">
+              HARDOX <span className="text-primary">Industrial</span>
+            </span>
+          </div>
+          <span className="pl-[52px] text-xs font-semibold italic text-primary">
+            O Sucesso do Seu Produto Passa Por Aqui
           </span>
         </a>
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Principal">
