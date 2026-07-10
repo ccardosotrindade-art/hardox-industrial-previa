@@ -407,8 +407,8 @@ const diferenciais = [
   { k: "100%", icon: Factory, t: "Fluxo Verticalizado", d: "Solda, jateamento e pintura no mesmo teto — zero fragmentação." },
   { k: "Sa 2½", icon: Sparkles, t: "Padrão de Preparação", d: "Aderência superior da pintura em componentes de grande porte." },
   { k: "ASME IX", icon: Award, t: "Solda Normatizada", d: "Procedimentos qualificados também sob AWS D1.1." },
-  { k: "24/7", icon: Clock, t: "Compromisso com Prazos", d: "Planejamento produtivo focado em cumprimento rigoroso." },
-  { k: "6×6×3,3m", icon: ShieldCheck, t: "Cabine Própria", d: "Capacidade para peças e estruturas industriais de grande porte." },
+  { k: "100%", icon: Clock, t: "Compromisso com Prazos", d: "Cronograma produtivo rastreável e comunicação proativa, com foco total no cumprimento de prazos." },
+  { k: "80µm", icon: PaintBucket, t: "Pintura Líquida", d: "Aplicação técnica de tintas líquidas industriais, com controle de espessura e acabamento protetivo." },
   { k: "SC + BR", icon: Truck, t: "Atendimento Flexível", d: "Base em Corupá/SC com abrangência conforme logística negociada." },
 ];
 
