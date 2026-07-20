@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import {
   Flame, Sparkles, PaintBucket, Wrench, ShieldCheck, Truck,
   Factory, Clock, Award, Users, ChevronLeft, ChevronRight,
-  Phone, Mail, MapPin, MessageCircle, Menu, X, CheckCircle2,
+  Phone, Mail, MapPin, MessageCircle, Menu, X, CheckCircle2, ImageIcon,
 } from "lucide-react";
 import heroWelding from "@/assets/hero-welding.jpg";
 import heroBlasting from "@/assets/hero-blasting.jpg";
@@ -138,6 +138,7 @@ function Nav() {
     { href: "#sobre", label: "Sobre" },
     { href: "#servicos", label: "Serviços" },
     { href: "#diferenciais", label: "Diferenciais" },
+    { href: "#galeria", label: "Galeria" },
     { href: "#depoimentos", label: "Clientes" },
     { href: "#faq", label: "FAQ" },
     { href: "#contato", label: "Contato" },
