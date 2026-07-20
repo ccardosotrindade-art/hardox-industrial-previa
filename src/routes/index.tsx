@@ -20,6 +20,16 @@ import g7 from "@/assets/gallery/g7.asset.json";
 import g8 from "@/assets/gallery/g8.asset.json";
 import g9 from "@/assets/gallery/g9.asset.json";
 import g10 from "@/assets/gallery/g10.asset.json";
+import g11 from "@/assets/gallery/g11.asset.json";
+import g12 from "@/assets/gallery/g12.asset.json";
+import g13 from "@/assets/gallery/g13.asset.json";
+import g14 from "@/assets/gallery/g14.asset.json";
+import g15 from "@/assets/gallery/g15.asset.json";
+import g16 from "@/assets/gallery/g16.asset.json";
+import g17 from "@/assets/gallery/g17.asset.json";
+import g18 from "@/assets/gallery/g18.asset.json";
+import g19 from "@/assets/gallery/g19.asset.json";
+import g20 from "@/assets/gallery/g20.asset.json";
 
 const SITE_URL = "https://hardox-industrial-previa.lovable.app";
 const OG_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fda300d5-5ff4-43bd-9d73-842cb6ee41bf/id-preview-3893d468--eaddae77-9509-43ef-a556-86e18ec0320f.lovable.app-1783444235212.png";
