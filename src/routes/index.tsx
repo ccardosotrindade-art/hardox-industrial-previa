@@ -10,6 +10,16 @@ import heroBlasting from "@/assets/hero-blasting.jpg";
 import heroPainting from "@/assets/hero-painting.jpg";
 import teamImg from "@/assets/team.jpg";
 import logoImg from "@/assets/logo.png";
+import g1 from "@/assets/gallery/g1.asset.json";
+import g2 from "@/assets/gallery/g2.asset.json";
+import g3 from "@/assets/gallery/g3.asset.json";
+import g4 from "@/assets/gallery/g4.asset.json";
+import g5 from "@/assets/gallery/g5.asset.json";
+import g6 from "@/assets/gallery/g6.asset.json";
+import g7 from "@/assets/gallery/g7.asset.json";
+import g8 from "@/assets/gallery/g8.asset.json";
+import g9 from "@/assets/gallery/g9.asset.json";
+import g10 from "@/assets/gallery/g10.asset.json";
 
 const SITE_URL = "https://hardox-industrial-previa.lovable.app";
 const OG_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fda300d5-5ff4-43bd-9d73-842cb6ee41bf/id-preview-3893d468--eaddae77-9509-43ef-a556-86e18ec0320f.lovable.app-1783444235212.png";
@@ -451,14 +461,16 @@ function Diferenciais() {
 type GalleryCategory = "Todos" | "Solda" | "Jateamento" | "Pintura" | "Peças";
 
 const galleryItems: { src: string; alt: string; cat: Exclude<GalleryCategory, "Todos"> }[] = [
-  { src: heroWelding, alt: "Soldagem MIG/MAG em componente industrial", cat: "Solda" },
-  { src: heroBlasting, alt: "Jateamento abrasivo Sa 2½ em cabine própria", cat: "Jateamento" },
-  { src: heroPainting, alt: "Pintura líquida industrial com controle de espessura", cat: "Pintura" },
-  { src: teamImg, alt: "Peça metálica fabricada e acabada", cat: "Peças" },
-  { src: heroWelding, alt: "Solda TIG em aço inox", cat: "Solda" },
-  { src: heroBlasting, alt: "Preparação de superfície de grande porte", cat: "Jateamento" },
-  { src: heroPainting, alt: "Aplicação de pintura eletrostática em pó", cat: "Pintura" },
-  { src: teamImg, alt: "Estrutura metálica pronta para expedição", cat: "Peças" },
+  { src: g2.url, alt: "Soldagem MIG em componente cilíndrico com flanges", cat: "Solda" },
+  { src: g3.url, alt: "Soldagem em execução com fagulhas — HARDOX Industrial", cat: "Solda" },
+  { src: g4.url, alt: "Fabricação de cabine metálica em processo de montagem", cat: "Fabricação" },
+  { src: g1.url, alt: "Peças usinadas e pintadas em laranja aguardando expedição", cat: "Peças" },
+  { src: g9.url, alt: "Estruturas pintadas em amarelo — acabamento industrial", cat: "Pintura" },
+  { src: g5.url, alt: "Reservatório industrial com acabamento em pintura azul", cat: "Pintura" },
+  { src: g6.url, alt: "Equipamento de grande porte com pintura branca protetiva", cat: "Pintura" },
+  { src: g7.url, alt: "Caçamba metálica com pintura preta de alta aderência", cat: "Pintura" },
+  { src: g8.url, alt: "Compartimento metálico com acabamento em pintura verde", cat: "Pintura" },
+  { src: g10.url, alt: "Estrutura cinza pronta para expedição sobre caminhão", cat: "Peças" },
 ];
 
 function Galeria() {
