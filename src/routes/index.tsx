@@ -815,7 +815,7 @@ function Footer() {
         <div>
           <h4 className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Navegação</h4>
           <ul className="mt-4 space-y-2 text-sm">
-            {[["#sobre","Sobre"],["#servicos","Serviços"],["#diferenciais","Diferenciais"],["#depoimentos","Clientes"],["#faq","FAQ"],["#contato","Contato"]].map(([h,l])=>(
+            {[["#sobre","Sobre"],["#servicos","Serviços"],["#diferenciais","Diferenciais"],["#galeria","Galeria"],["#depoimentos","Clientes"],["#faq","FAQ"],["#contato","Contato"]].map(([h,l])=>(
               <li key={h}><a href={h} className="hover:text-primary">{l}</a></li>
             ))}
           </ul>
