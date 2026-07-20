@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import {
   Flame, Sparkles, PaintBucket, Wrench, ShieldCheck, Truck,
   Factory, Clock, Award, Users, ChevronLeft, ChevronRight,
-  Phone, Mail, MapPin, MessageCircle, Menu, X, CheckCircle2,
+  Phone, Mail, MapPin, MessageCircle, Menu, X, CheckCircle2, ImageIcon,
 } from "lucide-react";
 import heroWelding from "@/assets/hero-welding.jpg";
 import heroBlasting from "@/assets/hero-blasting.jpg";
@@ -138,6 +138,7 @@ function Nav() {
     { href: "#sobre", label: "Sobre" },
     { href: "#servicos", label: "Serviços" },
     { href: "#diferenciais", label: "Diferenciais" },
+    { href: "#galeria", label: "Galeria" },
     { href: "#depoimentos", label: "Clientes" },
     { href: "#faq", label: "FAQ" },
     { href: "#contato", label: "Contato" },
@@ -447,6 +448,138 @@ function Diferenciais() {
   );
 }
 
+type GalleryCategory = "Todos" | "Solda" | "Jateamento" | "Pintura" | "Peças";
+
+const galleryItems: { src: string; alt: string; cat: Exclude<GalleryCategory, "Todos"> }[] = [
+  { src: heroWelding, alt: "Soldagem MIG/MAG em componente industrial", cat: "Solda" },
+  { src: heroBlasting, alt: "Jateamento abrasivo Sa 2½ em cabine própria", cat: "Jateamento" },
+  { src: heroPainting, alt: "Pintura líquida industrial com controle de espessura", cat: "Pintura" },
+  { src: teamImg, alt: "Peça metálica fabricada e acabada", cat: "Peças" },
+  { src: heroWelding, alt: "Solda TIG em aço inox", cat: "Solda" },
+  { src: heroBlasting, alt: "Preparação de superfície de grande porte", cat: "Jateamento" },
+  { src: heroPainting, alt: "Aplicação de pintura eletrostática em pó", cat: "Pintura" },
+  { src: teamImg, alt: "Estrutura metálica pronta para expedição", cat: "Peças" },
+];
+
+function Galeria() {
+  const cats: GalleryCategory[] = ["Todos", "Solda", "Jateamento", "Pintura", "Peças"];
+  const [cat, setCat] = useState<GalleryCategory>("Todos");
+  const [lightbox, setLightbox] = useState<number | null>(null);
+  const filtered = cat === "Todos" ? galleryItems : galleryItems.filter((i) => i.cat === cat);
+
+  useEffect(() => {
+    if (lightbox === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+      if (e.key === "ArrowRight") setLightbox((v) => (v === null ? v : (v + 1) % filtered.length));
+      if (e.key === "ArrowLeft") setLightbox((v) => (v === null ? v : (v - 1 + filtered.length) % filtered.length));
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightbox, filtered.length]);
+
+  return (
+    <section id="galeria" className="mx-auto max-w-7xl px-4 py-24 md:px-8 md:py-32">
+      <div data-reveal className="mx-auto max-w-2xl text-center opacity-0">
+        <span className="text-xs font-semibold uppercase tracking-widest text-primary">Galeria</span>
+        <h2 className="mt-3 text-3xl font-black leading-tight md:text-5xl">
+          Nossos trabalhos <span className="text-primary">em imagens</span>.
+        </h2>
+        <p className="mt-4 text-muted-foreground">
+          Registros reais de peças, processos e acabamentos entregues pela HARDOX Industrial.
+        </p>
+      </div>
+
+      <div className="mt-10 flex flex-wrap justify-center gap-2">
+        {cats.map((c) => (
+          <button
+            key={c}
+            onClick={() => setCat(c)}
+            className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${
+              cat === c
+                ? "border-primary bg-primary text-primary-foreground"
+                : "border-border bg-card text-muted-foreground hover:border-primary/60 hover:text-foreground"
+            }`}
+          >
+            {c}
+          </button>
+        ))}
+      </div>
+
+      <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+        {filtered.map((item, idx) => (
+          <button
+            key={`${item.src}-${idx}`}
+            onClick={() => setLightbox(idx)}
+            className="group relative aspect-square overflow-hidden rounded-xl border border-border bg-card"
+            aria-label={`Ampliar imagem: ${item.alt}`}
+          >
+            <img
+              src={item.src}
+              alt={item.alt}
+              loading="lazy"
+              className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent opacity-0 transition group-hover:opacity-100" />
+            <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 p-3 opacity-0 transition group-hover:opacity-100">
+              <span className="rounded-full bg-primary/90 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary-foreground">
+                {item.cat}
+              </span>
+              <ImageIcon size={16} className="text-white" />
+            </div>
+          </button>
+        ))}
+      </div>
+
+      {filtered.length === 0 && (
+        <p className="mt-10 text-center text-sm text-muted-foreground">Nenhuma imagem nesta categoria.</p>
+      )}
+
+      {lightbox !== null && filtered[lightbox] && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={filtered[lightbox].alt}
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            onClick={(e) => { e.stopPropagation(); setLightbox(null); }}
+            aria-label="Fechar"
+            className="absolute right-4 top-4 rounded-full border border-white/30 bg-white/10 p-2 text-white transition hover:bg-white/20"
+          >
+            <X size={22} />
+          </button>
+          <button
+            onClick={(e) => { e.stopPropagation(); setLightbox((v) => (v === null ? v : (v - 1 + filtered.length) % filtered.length)); }}
+            aria-label="Imagem anterior"
+            className="absolute left-4 rounded-full border border-white/30 bg-white/10 p-3 text-white transition hover:bg-white/20"
+          >
+            <ChevronLeft size={22} />
+          </button>
+          <figure onClick={(e) => e.stopPropagation()} className="max-h-[85vh] max-w-5xl">
+            <img
+              src={filtered[lightbox].src}
+              alt={filtered[lightbox].alt}
+              className="max-h-[80vh] w-auto rounded-lg object-contain"
+            />
+            <figcaption className="mt-3 text-center text-sm text-white/80">
+              {filtered[lightbox].alt}
+            </figcaption>
+          </figure>
+          <button
+            onClick={(e) => { e.stopPropagation(); setLightbox((v) => (v === null ? v : (v + 1) % filtered.length)); }}
+            aria-label="Próxima imagem"
+            className="absolute right-4 rounded-full border border-white/30 bg-white/10 p-3 text-white transition hover:bg-white/20"
+          >
+            <ChevronRight size={22} />
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
+
 const depoimentos = [
   {
     n: "Ricardo Menezes",
@@ -682,7 +815,7 @@ function Footer() {
         <div>
           <h4 className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Navegação</h4>
           <ul className="mt-4 space-y-2 text-sm">
-            {[["#sobre","Sobre"],["#servicos","Serviços"],["#diferenciais","Diferenciais"],["#depoimentos","Clientes"],["#faq","FAQ"],["#contato","Contato"]].map(([h,l])=>(
+            {[["#sobre","Sobre"],["#servicos","Serviços"],["#diferenciais","Diferenciais"],["#galeria","Galeria"],["#depoimentos","Clientes"],["#faq","FAQ"],["#contato","Contato"]].map(([h,l])=>(
               <li key={h}><a href={h} className="hover:text-primary">{l}</a></li>
             ))}
           </ul>
@@ -729,6 +862,7 @@ function Index() {
         <Sobre />
         <Servicos />
         <Diferenciais />
+        <Galeria />
         <Depoimentos />
         <CTA />
         <FAQ />
