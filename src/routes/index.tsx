@@ -481,6 +481,16 @@ const galleryItems: { src: string; alt: string; cat: Exclude<GalleryCategory, "T
   { src: g7.url, alt: "Caçamba metálica com pintura preta de alta aderência", cat: "Pintura" },
   { src: g8.url, alt: "Compartimento metálico com acabamento em pintura verde", cat: "Pintura" },
   { src: g10.url, alt: "Estrutura cinza pronta para expedição sobre caminhão", cat: "Peças" },
+  { src: g15.url, alt: "Soldagem de estrutura de grande porte em processo de fabricação", cat: "Solda" },
+  { src: g14.url, alt: "Reservatórios metálicos após jateamento aguardando pintura", cat: "Fabricação" },
+  { src: g17.url, alt: "Estrutura tubular em aço com solda de precisão — pré-pintura", cat: "Fabricação" },
+  { src: g11.url, alt: "Painéis metálicos pintados em branco na cabine de pintura líquida", cat: "Pintura" },
+  { src: g12.url, alt: "Painel de grande porte com pintura branca acabada", cat: "Pintura" },
+  { src: g13.url, alt: "Gabinetes metálicos com pintura preta de alto brilho", cat: "Pintura" },
+  { src: g18.url, alt: "Viga estrutural pintada em cinza — acabamento industrial", cat: "Pintura" },
+  { src: g19.url, alt: "Detalhe de estrutura pintada em laranja de alta durabilidade", cat: "Pintura" },
+  { src: g16.url, alt: "Racks industriais laranja embalados para expedição", cat: "Peças" },
+  { src: g20.url, alt: "Compartimento metálico com pintura branca pronto para entrega", cat: "Peças" },
 ];
 
 function Galeria() {
