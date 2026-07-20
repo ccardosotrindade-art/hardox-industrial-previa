@@ -458,7 +458,7 @@ function Diferenciais() {
   );
 }
 
-type GalleryCategory = "Todos" | "Solda" | "Jateamento" | "Pintura" | "Peças";
+type GalleryCategory = "Todos" | "Solda" | "Fabricação" | "Pintura" | "Peças";
 
 const galleryItems: { src: string; alt: string; cat: Exclude<GalleryCategory, "Todos"> }[] = [
   { src: g2.url, alt: "Soldagem MIG em componente cilíndrico com flanges", cat: "Solda" },
@@ -474,7 +474,7 @@ const galleryItems: { src: string; alt: string; cat: Exclude<GalleryCategory, "T
 ];
 
 function Galeria() {
-  const cats: GalleryCategory[] = ["Todos", "Solda", "Jateamento", "Pintura", "Peças"];
+  const cats: GalleryCategory[] = ["Todos", "Solda", "Fabricação", "Pintura", "Peças"];
   const [cat, setCat] = useState<GalleryCategory>("Todos");
   const [lightbox, setLightbox] = useState<number | null>(null);
   const filtered = cat === "Todos" ? galleryItems : galleryItems.filter((i) => i.cat === cat);
