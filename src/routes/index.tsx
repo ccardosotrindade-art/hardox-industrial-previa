@@ -307,7 +307,7 @@ function Sobre() {
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <div data-reveal className="opacity-0">
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">Sobre a HARDOX</span>
-          <h2 className="mt-3 text-3xl font-black leading-tight md:text-5xl">
+          <h2 className="mt-3 text-[1.3125rem] font-black leading-tight md:text-[2.1rem]">
             Excelência técnica que nasce do controle sobre <span className="text-primary">cada etapa</span>.
           </h2>
           <div className="mt-6 space-y-4 text-muted-foreground">
@@ -389,7 +389,7 @@ function Servicos() {
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div data-reveal className="mx-auto max-w-2xl text-center opacity-0">
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">Serviços e Soluções</span>
-          <h2 className="mt-3 text-3xl font-black leading-tight md:text-5xl">
+          <h2 className="mt-3 text-[1.3125rem] font-black leading-tight md:text-[2.1rem]">
             Você nos entrega o projeto, nós devolvemos a peça pronta e acabada.
           </h2>
           <p className="mt-4 text-muted-foreground">
@@ -438,7 +438,7 @@ function Diferenciais() {
     <section id="diferenciais" className="mx-auto max-w-7xl px-4 py-24 md:px-8 md:py-32">
       <div data-reveal className="mx-auto max-w-2xl text-center opacity-0">
         <span className="text-xs font-semibold uppercase tracking-widest text-primary">Por que a HARDOX</span>
-        <h2 className="mt-3 text-3xl font-black leading-tight md:text-5xl">
+        <h2 className="mt-3 text-[1.3125rem] font-black leading-tight md:text-[2.1rem]">
           Números que traduzem <span className="text-primary">precisão técnica</span>.
         </h2>
         <p className="mt-4 text-muted-foreground">
@@ -514,7 +514,7 @@ function Galeria() {
     <section id="galeria" className="mx-auto max-w-7xl px-4 py-24 md:px-8 md:py-32">
       <div data-reveal className="mx-auto max-w-2xl text-center opacity-0">
         <span className="text-xs font-semibold uppercase tracking-widest text-primary">Galeria</span>
-        <h2 className="mt-3 text-3xl font-black leading-tight md:text-5xl">
+        <h2 className="mt-3 text-[1.3125rem] font-black leading-tight md:text-[2.1rem]">
           Nossos trabalhos <span className="text-primary">em imagens</span>.
         </h2>
         <p className="mt-4 text-muted-foreground">
@@ -636,7 +636,7 @@ function Depoimentos() {
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div data-reveal className="mx-auto max-w-2xl text-center opacity-0">
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">Prova Social</span>
-          <h2 className="mt-3 text-3xl font-black leading-tight md:text-5xl">
+          <h2 className="mt-3 text-[1.3125rem] font-black leading-tight md:text-[2.1rem]">
             Segurança e confiança <span className="text-primary">na visão de quem contrata</span>.
           </h2>
           <p className="mt-4 text-muted-foreground">
@@ -693,7 +693,7 @@ function FAQ() {
     <section id="faq" className="mx-auto max-w-4xl px-4 py-24 md:px-8 md:py-32">
       <div data-reveal className="text-center opacity-0">
         <span className="text-xs font-semibold uppercase tracking-widest text-primary">Perguntas Frequentes</span>
-        <h2 className="mt-3 text-3xl font-black leading-tight md:text-5xl">Tire suas dúvidas técnicas.</h2>
+        <h2 className="mt-3 text-[1.3125rem] font-black leading-tight md:text-[2.1rem]">Tire suas dúvidas técnicas.</h2>
       </div>
       <div className="mt-12 divide-y divide-border rounded-2xl border border-border bg-card">
         {faqs.map((f, idx) => (
@@ -715,7 +715,7 @@ function CTA() {
     <section className="relative overflow-hidden py-20 md:py-28" style={{ backgroundColor: "#2b87bc" }}>
       <div className="absolute inset-0 opacity-20" aria-hidden style={{ backgroundImage: "radial-gradient(circle at 20% 20%, white 0.5px, transparent 1px)", backgroundSize: "24px 24px" }} />
       <div className="relative mx-auto max-w-4xl px-4 text-center text-white md:px-8">
-        <h2 className="text-3xl font-black leading-tight md:text-5xl">
+        <h2 className="text-[1.3125rem] font-black leading-tight md:text-[2.1rem]">
           Pronto para eliminar a fragmentação de fornecedores?
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-white/90 md:text-lg">
@@ -745,7 +745,7 @@ function Contato() {
       <div className="grid gap-12 lg:grid-cols-2">
         <div data-reveal className="opacity-0">
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">Contato</span>
-          <h2 className="mt-3 text-3xl font-black leading-tight md:text-5xl">Vamos conversar sobre o seu projeto.</h2>
+          <h2 className="mt-3 text-[1.3125rem] font-black leading-tight md:text-[2.1rem]">Vamos conversar sobre o seu projeto.</h2>
           <p className="mt-4 text-muted-foreground">
             Nossa equipe está pronta para avaliar suas especificações e retornar com uma proposta técnica.
           </p>
